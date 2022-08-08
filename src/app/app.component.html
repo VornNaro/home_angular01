@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+
+<div class="container m-auto ">
+    <div class="grid grid-cols-10 gap-2">
+        <div class="col-span-2">
+            <app-sidebar [content_list]="subject_list" (selected)="getData($event)"></app-sidebar>
+
+        </div>
+        <div class="col-span-8 ">
+
+            <app-card-content>
+                <h5 ti class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {{subject.name}}
+                </h5>
+                <p de class="font-normal text-gray-700 dark:text-gray-400">
+                    {{subject.description}}
+                </p>
+                <div photo>
+                <img src="assets/{{subject.thumbnail}}" alt="{{subject.thumbnail" class="w-64 h-64">
+                </div>
+
+            </app-card-content>
+
+        </div>
+    </div>
+</div>

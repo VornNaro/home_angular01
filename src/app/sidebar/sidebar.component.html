@@ -1,0 +1,19 @@
+
+
+
+<div class="flex flex-col container mx-auto mt-10 ">
+<aside class="w-64 border rounded-lg drop-shadow-lg" aria-label="Sidebar">
+    <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded-lg dark:bg-gray-800">
+      <h1 class="text-xl font-bold mb-5">My Favorite Subject</h1>
+      <hr >
+       <ul class="space-y-2" >
+          <li class="width-full hover:bg-gray-100 dark:hover:bg-gray-700" *ngFor="let item of content_list">
+             <button (click)="selectSubject(item)" class="p-3 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white  ">
+               <img src="assets/{{item.thumbnail}}" alt="{{item.thumbnail}}" class="w-8 h-8"> 
+                <span class="ml-3 text-lg">{{item.name}}</span>
+             </button>
+          </li>
+       </ul>
+    </div>
+ </aside>
+</div>
